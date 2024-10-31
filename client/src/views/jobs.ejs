@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Job Board</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/6676-img-xfavicon.png.pagespeed.ic.xjuSQ5i6l5.png">
+
+
+    <link rel="stylesheet"
+        href="css/css-A.bootstrap.min.css+owl.carousel.min.css+magnific-popup.css+font-awesome.min.css+themify-icons.css+nice-select.css+flaticon.css+jquery-ui.css+gijgo.css+animate.min.css+slicknav.css,Mcc.lDCk9MGxvv.css.pagespeed.cf.fYDCsCWc_T.css">
+    <link rel="stylesheet" href="css/css-A.style.css.pagespeed.cf._e2VPArvQd.css">
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid ">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div style="margin: 25px;" class="logo">
+                                    <a href="index.html">
+                                        <img src="images/img-xlogo.png.pagespeed.ic.NhS5v0bjhU.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Matching jobs</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="job_listing_area plus_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="job_lists m-0">
+                        <div class="row">
+                            <% jobs.forEach((job) => { %>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="single_jobs white-bg d-flex justify-content-between">
+                                    <div class="jobs_left d-flex align-items-center">
+                                        <img src="/image/<%= job.details.company %>" class="img-fluid"
+                                            style="margin-right: 40px; width: 100px;">
+                                        <div class="jobs_conetent">
+                                            <a href="/job/<%= job.id %>">
+                                                <h4><%= job.details.title %></h4>
+                                            </a>
+                                            <div class="links_locat d-flex align-items-center">
+                                                <!----
+                                                    <div class="location">
+                                                    <p> <i class="fa fa-map-marker"></i> <%= job.location %></p>
+                                                </div>
+                                                --->
+                                                <div class="location">
+                                                    <p> <i class="fa fa-clock-o"></i> Full-time</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jobs_right">
+                                        <div class="apply_now">
+                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a href="/job/<%= job.id %>" class="boxed-btn3">Apply Now</a>
+                                        </div>
+                                        <!----
+                                        <div class="date">
+                                            <p>Date line: 31 Jan 2020</p>
+                                        </div>
+                                        --->
+                                    </div>
+                                </div>
+                            </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div style="height: 8vh !important" class="copy-right_text wow fadeInUp" data-wow-duration="1.4s"
+            data-wow-delay=".3s">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div style="margin-top: 25px;" class="col-xl-12">
+                        <p class="copy_right text-center">
+
+                            NoCopyright &copy;<script data-cfasync="false"
+                                src="js/cloudflare-static-email-decode.min.js">
+                            </script>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                            some kids at GTBIT</a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/vendor-modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor-jquery-1.12.4.min.js"></script>
+    <script src="js/3102-js-popper.min.js+bootstrap.min.js.pagespeed.jc.mLkWlDSjxY.js"></script>
+    <script>
+        eval(mod_pagespeed_Omu72zWnh9);
+    </script>
+    <script>
+        eval(mod_pagespeed_oACAyWMTN0);
+    </script>
+    <script
+        src="js/4500-js-owl.carousel.min.js+isotope.pkgd.min.js+ajax-form.js+waypoints.min.js+jquery.counterup.min.js.pagespeed.jc.4FXXOhgeIR.js">
+    </script>
+    <script>
+        eval(mod_pagespeed_Y2u78ijQkb);
+    </script>
+    <script>
+        eval(mod_pagespeed_jjBuSOmyTK);
+    </script>
+    <script>
+        eval(mod_pagespeed_pxkNkKb$TU);
+    </script>
+    <script>
+        eval(mod_pagespeed_KWG0ngQeSU);
+    </script>
+    <script>
+        eval(mod_pagespeed_Unsm88A0e0);
+    </script>
+    <script
+        src="js/1926-js-imagesloaded.pkgd.min.js+scrollIt.js+jquery.scrollUp.min.js+wow.min.js+nice-select.min.js+jquery.slicknav.min.js+jquery.magnific-popup.min.js+plugins.js.pagespeed.jc.Oz3YuEEyg4.js">
+    </script>
+    <script>
+        eval(mod_pagespeed_9EvViQ8HO5);
+    </script>
+    <script>
+        eval(mod_pagespeed_jtLG422ibD);
+    </script>
+    <script>
+        eval(mod_pagespeed_W6w0tNt_E6);
+    </script>
+    <script>
+        eval(mod_pagespeed_7BfLKMwNpM);
+    </script>
+    <script>
+        eval(mod_pagespeed_7wA$zSFbu1);
+    </script>
+    <script>
+        eval(mod_pagespeed_O$KYzO$ZqE);
+    </script>
+    <script>
+        eval(mod_pagespeed_7WE4VahUcL);
+    </script>
+    <script>
+        eval(mod_pagespeed_cBN5jZAyzL);
+    </script>
+
+    <script src="js/6579-js-range.js"></script>
+
+    <script
+        src="js/2469-js-contact.js+jquery.ajaxchimp.min.js+jquery.form.js+jquery.validate.min.js+mail-script.js+main.js.pagespeed.jc._Ih1xJiJ_v.js">
+    </script>
+    <script>
+        eval(mod_pagespeed_faDIr$mWEC);
+    </script>
+    <script>
+        eval(mod_pagespeed_myGj$7Dv_i);
+    </script>
+    <script>
+        eval(mod_pagespeed_up2DKPIYZG);
+    </script>
+    <script>
+        eval(mod_pagespeed_BWLqWRxgVV);
+    </script>
+    <script>
+        eval(mod_pagespeed_hPySKRtOfg);
+    </script>
+    <script>
+        eval(mod_pagespeed_Pie2YIdajy);
+    </script>
+
+
+
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597"
+        integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A=="
+        data-cf-beacon='{"rayId":"6bdf23637d0c27e2","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
