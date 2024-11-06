@@ -49,7 +49,8 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="bradcam_text">
-            <h3><%= job.title %></h3>
+            <h3 style="color: black; margin-left: 15px;"><%= job.company %></h3>
+            <h3 style="color: black; margin-left: 15px;"><%= job.title %> </h3>
           </div>
         </div>
       </div>
@@ -63,25 +64,21 @@
           <div class="job_details_header">
             <div class="single_jobs white-bg d-flex justify-content-between">
               <div class="jobs_left d-flex align-items-center">
-                <img src="/image/<%= job.company %>" class="img-fluid" style="margin-right: 40px; width: 100px;">
-                <div class="jobs_conetent">
+                
+                <div class="jobs_content">
                   <a href="/job/<%= job.id %>">
                     <h4><%= job.title %></h4>
                   </a>
                   <% if(job.location) { %>
                   <div class="links_locat d-flex align-items-center">
                     <div class="location">
-                      <p> <i class="fa fa-map-marker"></i> <%= job.location %></p>
+                      <p> <%= job.location %></p>
                     </div>
                   </div>
                   <% } %>
                 </div>
               </div>
-              <div class="jobs_right">
-                <div class="apply_now">
-                  <a id="aa" onclick="toggle()" class="heart_mark" href="#"> <i id="bb" class="ti-heart"></i> </a>
-                </div>
-              </div>
+              
               <script>
                 function toggle() {
                   document.getElementById('aa').style.backgroundColor = document.getElementById('aa').style
@@ -117,7 +114,7 @@
               <%
               job.apply_url = job.company=='pharmeasy' ? job.apply_url.replace('jobs','jobs/') : job.apply_url;
               %>
-              <button onclick='top.location.href="<%= job.apply_url %>"' class="boxed-btn3 w-100" type="submit">Apply
+              <button onclick='top.location.href="<%= job.apply_url %>"' class="boxed-btn3 w-100" type="submit" style="margin-left: 40px;">Apply
                 Now</button>
             </div>
           </div>
@@ -139,8 +136,7 @@
               </script>
               <script>
                 document.write(new Date().getFullYear());
-              </script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-              some kids at GTBIT</a>
+              </script> | Made by some kids at GTBIT</a>
 
             </p>
           </div>

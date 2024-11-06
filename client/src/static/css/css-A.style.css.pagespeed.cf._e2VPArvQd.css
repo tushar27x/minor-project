@@ -985,7 +985,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../images/banner-banner.png);
+  background-image: url(../images/backy.png);
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
@@ -1036,16 +1036,18 @@ h3 {
 /* line 29, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h5 {
   font-size: 30px;
-  color: #fff;
+  color: #0b0a0a;
+  margin-left: 350px;
   font-weight: 400;
 }
 
 /* line 34, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 {
+  margin-left: 520px;
   font-family: "Roboto", sans-serif;
   font-size: 56px;
   font-weight: 500;
-  color: #fff;
+  color: #040404;
 }
 
 @media (max-width: 767px) {
@@ -1790,7 +1792,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-  background-image: url(../images/banner-bradcam.png);
+  background-image: url(../images/backy.png);
 }
 
 /* line 4, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
