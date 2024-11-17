@@ -1,235 +1,58 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
+<html lang="en" class="h-full bg-gray-100">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Job Board</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicons/9755-img-xfavicon.png.pagespeed.ic.xjuSQ5i6l5.png">
-
-
-  <link rel="stylesheet"
-    href="/css/css-A.bootstrap.min.css+owl.carousel.min.css+magnific-popup.css+font-awesome.min.css+themify-icons.css+nice-select.css+flaticon.css+gijgo.css+animate.min.css+slicknav.css,Mcc.h6Rhmnvo7X.css.pagespeed.cf.TSGW8s3GkL.css">
-  <link rel="stylesheet" href="/css/css-A.style.css.pagespeed.cf._e2VPArvQd.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Board - Job Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="h-full flex flex-col">
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-4 py-6">
+            <a href="/" class="text-xl font-bold text-gray-800">Job Description</a>
+        </nav>
+    </header>
 
-<body>
-  <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-  <header>
-    <div class="header-area ">
-      <div id="sticky-header" class="main-header-area">
-        <div class="container-fluid ">
-          <div class="header_bottom_border">
-            <div class="row align-items-center">
-              <div class="col-xl-3 col-lg-2">
-                <div style="margin: 25px;" class="logo">
-                  <a href="index.html">
-                    <img src="images/img-xlogo.png.pagespeed.ic.NhS5v0bjhU.png" alt="">
-                  </a>
-                </div>
-              </div>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+                <h2 class="text-2xl font-bold text-gray-900"><%= job.company %></h2>
+                <h3 class="mt-1 text-xl text-gray-600"><%= job.title %></h3>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-
-  <div class="bradcam_area bradcam_bg_1">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="bradcam_text">
-            <h3 style="color: black; margin-left: 15px;"><%= job.company %></h3>
-            <h3 style="color: black; margin-left: 15px;"><%= job.title %> </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="job_details_area">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="job_details_header">
-            <div class="single_jobs white-bg d-flex justify-content-between">
-              <div class="jobs_left d-flex align-items-center">
-                
-                <div class="jobs_content">
-                  <a href="/job/<%= job.id %>">
-                    <h4><%= job.title %></h4>
-                  </a>
-                  <% if(job.location) { %>
-                  <div class="links_locat d-flex align-items-center">
-                    <div class="location">
-                      <p> <%= job.location %></p>
+            <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+                <div class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                    <div class="sm:col-span-2">
+                        <div class="text-sm font-medium text-gray-500">Job Description</div>
+                        <div class="mt-1 text-sm text-gray-900 whitespace-pre-wrap"><%- job.description %></div>
                     </div>
-                  </div>
-                  <% } %>
+                    <div class="sm:col-span-1">
+                        <div class="text-sm font-medium text-gray-500">Location</div>
+                        <div class="mt-1 text-sm text-gray-900"><%= job.location || 'Not specified' %></div>
+                    </div>
+                    <div class="sm:col-span-1">
+                        <div class="text-sm font-medium text-gray-500">Job Type</div>
+                        <div class="mt-1 text-sm text-gray-900">Full-time</div>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <a href="<%= job.apply_url %>" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Apply Now
+                        </a>
+                    </div>
                 </div>
-              </div>
-              
-              <script>
-                function toggle() {
-                  document.getElementById('aa').style.backgroundColor = document.getElementById('aa').style
-                    .backgroundColor ? '' : '#00D363';
-                  document.getElementById('bb').style.color = document.getElementById('bb').style.color ? '' : 'white';
-                }
-              </script>
-
             </div>
-          </div>
-          <div class="descript_wrap white-bg">
-            <div style="white-space: pre-wrap;" class="single_wrap">
-              <%- job.description  %>
-            </div>
-          </div>
-
         </div>
-        <div class=" col-lg-4">
-          <div class="job_sumary">
-            <div class="summery_header">
-              <h3>Job Summary</h3>
-            </div>
-            <div class="job_content">
-              <ul>
-                <% if(job.location) { %>
-                <li>Location: <span><%= job.location %></span></li>
-                <% } %>
-                <li>Job Type: <span> Full-time</span></li>
-                <li>Internal Job ID: <span> <%= job.job_id %> </span></li>
-              </ul>
-            </div>
-            <div class="submit_btn">
-              <%
-              job.apply_url = job.company=='pharmeasy' ? job.apply_url.replace('jobs','jobs/') : job.apply_url;
-              %>
-              <button onclick='top.location.href="<%= job.apply_url %>"' class="boxed-btn3 w-100" type="submit" style="margin-left: 40px;">Apply
-                Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </main>
 
-  <footer class="footer">
-    <div style="height: 8vh !important" class="copy-right_text wow fadeInUp" data-wow-duration="1.4s"
-      data-wow-delay=".3s">
-      <div class="container">
-        <div class="footer_border"></div>
-        <div class="row">
-          <div style="margin-top: 25px;" class="col-xl-12">
-            <p class="copy_right text-center">
-
-              NoCopyright &copy;<script data-cfasync="false" src="js/cloudflare-static-email-decode.min.js">
-              </script>
-              <script>
-                document.write(new Date().getFullYear());
-              </script> | Made by some kids at GTBIT</a>
-
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">
+                NoCopyright &copy; <script>document.write(new Date().getFullYear());</script> | Made by some kids at GTBIT
             </p>
-          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-
-
-  <script src="js/vendor-modernizr-3.5.0.min.js"></script>
-  <script src="js/vendor-jquery-1.12.4.min.js"></script>
-  <script src="js/9662-js-popper.min.js+bootstrap.min.js.pagespeed.jc.mLkWlDSjxY.js"></script>
-  <script>
-    eval(mod_pagespeed_Omu72zWnh9);
-  </script>
-  <script>
-    eval(mod_pagespeed_oACAyWMTN0);
-  </script>
-  <script
-    src="js/3125-js-owl.carousel.min.js+isotope.pkgd.min.js+ajax-form.js+waypoints.min.js+jquery.counterup.min.js.pagespeed.jc.4FXXOhgeIR.js">
-  </script>
-  <script>
-    eval(mod_pagespeed_Y2u78ijQkb);
-  </script>
-  <script>
-    eval(mod_pagespeed_jjBuSOmyTK);
-  </script>
-  <script>
-    eval(mod_pagespeed_pxkNkKb$TU);
-  </script>
-  <script>
-    eval(mod_pagespeed_KWG0ngQeSU);
-  </script>
-  <script>
-    eval(mod_pagespeed_Unsm88A0e0);
-  </script>
-  <script
-    src="js/6761-js-imagesloaded.pkgd.min.js+scrollIt.js+jquery.scrollUp.min.js+wow.min.js+nice-select.min.js+jquery.slicknav.min.js+jquery.magnific-popup.min.js+plugins.js.pagespeed.jc.Oz3YuEEyg4.js">
-  </script>
-  <script>
-    eval(mod_pagespeed_9EvViQ8HO5);
-  </script>
-  <script>
-    eval(mod_pagespeed_jtLG422ibD);
-  </script>
-  <script>
-    eval(mod_pagespeed_W6w0tNt_E6);
-  </script>
-  <script>
-    eval(mod_pagespeed_7BfLKMwNpM);
-  </script>
-  <script>
-    eval(mod_pagespeed_7wA$zSFbu1);
-  </script>
-  <script>
-    eval(mod_pagespeed_O$KYzO$ZqE);
-  </script>
-  <script>
-    eval(mod_pagespeed_7WE4VahUcL);
-  </script>
-  <script>
-    eval(mod_pagespeed_cBN5jZAyzL);
-  </script>
-  <script src="js/6613-js-gijgo.min.js"></script>
-
-  <script
-    src="js/7731-js-contact.js+jquery.ajaxchimp.min.js+jquery.form.js+jquery.validate.min.js+mail-script.js+main.js.pagespeed.jc._Ih1xJiJ_v.js">
-  </script>
-  <script>
-    eval(mod_pagespeed_faDIr$mWEC);
-  </script>
-  <script>
-    eval(mod_pagespeed_myGj$7Dv_i);
-  </script>
-  <script>
-    eval(mod_pagespeed_up2DKPIYZG);
-  </script>
-  <script>
-    eval(mod_pagespeed_BWLqWRxgVV);
-  </script>
-  <script>
-    eval(mod_pagespeed_hPySKRtOfg);
-  </script>
-  <script>
-    eval(mod_pagespeed_Pie2YIdajy);
-  </script>
-
-
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v64f9daad31f64f81be21cbef6184a5e31634941392597"
-    integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A=="
-    data-cf-beacon='{"rayId":"6bdf277aac8760d1","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
-    crossorigin="anonymous"></script>
+    <script>
+        // Any necessary JavaScript can be included here
+    </script>
 </body>
-
 </html>
